@@ -8,8 +8,8 @@
 		"${author}"
 	],
 	"contact": {
-		"sources": "https://github.com/${github}/${name}",
-		"issues": "https://github.com/${github}/${name}/issues"
+		"sources": "https://github.com/${github}/OffHandTickFix",
+		"issues": "https://github.com/${github}/OffHandTickFix/issues"
 	},
 	"license": "${license}",
 	"icon": "assets/${id}/logo.png",
@@ -20,9 +20,6 @@
 		],
 		"client": [
 			"${group}.${namespace}.${name}"
-		],
-		"fabric-datagen": [
-			"${group}.${namespace}.foundation.data.${name}Datagen"
 		]
 	},
 	"mixins": [
@@ -33,6 +30,5 @@
 		"minecraft": "${mc}",
 		"fabric-api": "*",
 		"necronomicon": ">=1.6.0"
-	},
-	"accessWidener": "${id}.accesswidener"
+	}
 }

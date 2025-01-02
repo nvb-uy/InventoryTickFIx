@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "elocindev.examplemod.mixins",
+  "package": "elocindev.offhandtickfix.mixins",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "mixins": [

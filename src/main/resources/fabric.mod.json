@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"${group}.${namespace}.${name}"
+			"elocindev.offhandtickfix.OffHandTickFix"
 		],
 		"client": [
-			"${group}.${namespace}.${name}"
+			"elocindev.offhandtickfix.OffHandTickFix"
 		]
 	},
 	"mixins": [

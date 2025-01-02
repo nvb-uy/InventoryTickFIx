@@ -5,7 +5,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import elocindev.offhandtickfix.config.Configs;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.registry.Registries;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
@@ -16,8 +18,13 @@ public class LivingEntityMixin {
         var stack = ths.getOffHandStack();
         
         if (!stack.isEmpty()) {
-            // https://minecraft.fandom.com/wiki/Slot 99 seems to be off hand slot
-            stack.getItem().inventoryTick(stack, ths.getWorld(), ths, 99, false);
+            for (String regex : Configs.MAIN.tick_regex) {
+                if (Registries.ITEM.getId(stack.getItem()).toString().matches(regex)) {
+                    // https://minecraft.fandom.com/wiki/Slot 99 seems to be off hand slot
+                    stack.inventoryTick(ths.getWorld(), ths, 99, false);
+                    return;
+                }
+            }
         }
     }
 }

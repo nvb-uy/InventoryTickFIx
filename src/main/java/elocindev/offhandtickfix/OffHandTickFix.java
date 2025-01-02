@@ -28,7 +28,7 @@ import net.neoforged.fml.ModContainer;
 
 
 //? if forge || neoforge {
-/*@Mod(ExampleMod.MODID)
+/*@Mod(OffHandTickFix.MODID)
 *///?}
 public class OffHandTickFix
 //? if fabric {
